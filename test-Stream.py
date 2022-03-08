@@ -20,7 +20,7 @@ df.head(30)
 
 st.header('Chargement des données')
 
-st.dataframe(df.shape())
+
 st.dataframe(df.head(30))
 
 st.dataframe(df.describe().transpose().round())
