@@ -5,6 +5,8 @@
 
 import pandas as pd
 import streamlit as st
+import matplotlib.pyplot as plt
+%matplotlib inline
 #import plotly.express as px
 
 
@@ -24,6 +26,20 @@ st.header('Chargement des données')
 st.dataframe(df.head(30))
 
 st.dataframe(df.describe().transpose().round())
+
+st.dataframe(df.median().round())
+
+st.dataframe(df=df.drop(['Boosts reçus', 'Nombre de Posts', 'Nombre de Commentaires', 'Nombre de likes émis', 'Points'], axis=1))
+
+plt.figure(figsize=(20, 10))
+
+# Génération de la matrice des liens
+Z = linkage(df_scaled, method = 'ward', metric = 'euclidean')
+
+# Affichage du dendrogramme
+plt.title("Challenge ASCAA Hivernal - Regroupement des équipes")
+dendrogram(Z, labels = df.index, leaf_rotation = 75, color_threshold = 7)
+plt.show()
 
 # In[ ]:
 
