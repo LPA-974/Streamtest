@@ -7,6 +7,8 @@ import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
 
+from sklearn import preprocessing
+from sklearn.preprocessing import StandardScaler
 #import plotly.express as px
 
 
@@ -31,6 +33,8 @@ st.dataframe(df.median().round())
 
 st.dataframe(df=df.drop(['Boosts reçus', 'Nombre de Posts', 'Nombre de Commentaires', 'Nombre de likes émis', 'Points'], axis=1))
 
+scaler=preprocessing.StandardScaler().fit(df)
+df_scaled=scaler.transform(df)
 plt.figure(figsize=(20, 10))
 
 # Génération de la matrice des liens
