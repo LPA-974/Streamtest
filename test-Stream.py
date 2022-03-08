@@ -31,7 +31,7 @@ st.dataframe(df.describe().transpose().round())
 
 st.dataframe(df.median().round())
 
-st.dataframe(df=df.drop(['Boosts reçus', 'Nombre de Posts', 'Nombre de Commentaires', 'Nombre de likes émis', 'Points'], axis=1))
+df=df.drop(['Boosts reçus', 'Nombre de Posts', 'Nombre de Commentaires', 'Nombre de likes émis', 'Points'], axis=1))
 
 st.dataframe(df.head(30))
 #scaler=preprocessing.StandardScaler().fit(df)
