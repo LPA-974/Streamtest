@@ -9,7 +9,7 @@ import streamlit as st
 
 #from sklearn import preprocessing
 #from sklearn.preprocessing import StandardScaler
-import plotly.express as px
+#import plotly.express as px
 
 
 # In[6]:
