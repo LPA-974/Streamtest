@@ -9,7 +9,7 @@ import streamlit as st
 
 #from sklearn import preprocessing
 #from sklearn.preprocessing import StandardScaler
-#import plotly.express as px
+import plotly.express as px
 
 
 # In[6]:
@@ -27,8 +27,11 @@ st.header('Chargement des données')
 
 st.dataframe(df.head(30))
 
+st.markdown('Calcul des statistiques')
 st.dataframe(df.describe().transpose().round())
 
+
+st.markdown('Calcul de la médiane')
 st.dataframe(df.median().round())
 
 
