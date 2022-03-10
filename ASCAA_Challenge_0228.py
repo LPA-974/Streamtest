@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-
+import plotly.express as px
 st.title ("Challenge hivernal ASCAA")
 st.subheader('Résultats au 28 Février 2022')
 
