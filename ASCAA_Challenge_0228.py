@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 
-
+st.image('./ASCAA_logo.jpg')
 
 st.title ("Challenge hivernal ASCAA")
 st.subheader('Résultats intermédaires au 28 Février 2022')
