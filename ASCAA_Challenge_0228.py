@@ -39,6 +39,8 @@ df=df.sort_values(by=['Quizz'])
 st.markdown('Nombre de Quizz bien répondu')
 st.bar_chart(df['Quizz'])
 
+st.image('./Dendro_0228.jpg')
+
 df=df.drop(['Nombre de Commentaires', 'Nombre de likes émis', 'Boosts reçus', 'Nombre de personnes',
             'Nombre de quizz répondus',
            ], axis=1)
