@@ -5,7 +5,7 @@
 
 import pandas as pd
 import streamlit as st
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 #from sklearn import preprocessing
 #from sklearn.preprocessing import StandardScaler
@@ -39,3 +39,5 @@ df=df.drop(['Boosts reçus', 'Nombre de Posts', 'Nombre de Commentaires', 'Nombr
 
 
 st.dataframe(df.head(30))
+
+st.button('Click me')
