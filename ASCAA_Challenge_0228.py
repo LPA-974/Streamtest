@@ -32,11 +32,11 @@ st.markdown('Nombre de missions validées')
 st.bar_chart(df['Missions'])
 
 
-st.markdown('Nombre de Boosts')
+st.markdown('Nombre de Boosts attribués')
 st.bar_chart(df['Boosts'])
 
 
-st.markdown('Nombre de Quizz bien répondu')
+st.markdown('Nombre de Quizz Ok')
 st.bar_chart(df['Quizz'])
 
 st.markdown('Regroupements multicritères')
