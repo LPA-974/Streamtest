@@ -35,6 +35,6 @@ st.markdown('Calcul de la médiane')
 st.dataframe(df.median().round())
 
 
-
+df=df.drop(['Boosts reçus', 'Nombre de Posts', 'Nombre de Commentaires', 'Nombre de likes émis', 'Points'], axis=1)
 
 
