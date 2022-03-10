@@ -24,7 +24,7 @@ df.head(30)
 
 st.header('Chargement des données')
 
-
+st.write(df)
 st.dataframe(df.head(30))
 
 st.markdown('Calcul des statistiques')
