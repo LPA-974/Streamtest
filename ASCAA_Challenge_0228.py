@@ -1,8 +1,10 @@
 import pandas as pd
 import streamlit as st
+import matplotlib.pyplot as plt
+
 
 st.title ("Challenge hivernal ASCAA")
-st.subheader('Résultats au 28 Février 2022')
+st.subheader('Résultats intermédaires au 28 Février 2022')
 
 df=pd.read_csv("Rapport_Hebdo_2802.csv",sep=";", encoding='Latin_1', index_col = 0)
 print(df.info())
@@ -14,11 +16,11 @@ df.rename(columns={"Boosts envoyés":"Boosts", "Nombre de quizz bien répondu":"
          )
 
 df=df.sort_values(by=['Points'])
-st.markdown('Points au 28 Février')
+st.markdown('Points')
 st.bar_chart(df['Points'], use_container_width=True)
 
 df=df.sort_values(by=['Distance'])
-st.markdown('Distance totale au 28 Février')
+st.markdown('Distance totale')
 st.bar_chart(df['Distance'])
 
 df=df.sort_values(by=['Missions'])
