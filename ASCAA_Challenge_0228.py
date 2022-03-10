@@ -35,7 +35,11 @@ df=df.sort_values(by=['Quizz'])
 st.markdown('Nombre de Quizz bien répondu')
 st.bar_chart(df['Quizz'])
 
+df=df.drop(['Nombre de Commentaires', 'Nombre de likes émis', 'Boosts reçus', 'Nombre de personnes',
+            'Nombre de quizz répondus',
+           ], axis=1)
 
+st.markdown('Données chiffrées')
 st.write(df)
 
 st.markdown('Calcul des statistiques')
@@ -47,4 +51,3 @@ st.write(df.median().round())
 
 
 
-df=df.drop(['Boosts reçus', 'Nombre de Posts', 'Nombre de Commentaires', 'Nombre de likes émis', 'Points', 'Nombre de personnes'], axis=1)
