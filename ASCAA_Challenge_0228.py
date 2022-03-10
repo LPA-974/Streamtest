@@ -57,6 +57,6 @@ st.date_input('Your birthday')
 st.time_input('Meeting time')
 st.file_uploader('Upload a CSV')
 st.camera_input('Take a picture')
-st.download_button('Download file', data)
+
 
 st.color_picker('Pick a color')
