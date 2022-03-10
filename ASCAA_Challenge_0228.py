@@ -15,30 +15,31 @@ df.rename(columns={"Boosts envoyés":"Boosts", "Nombre de quizz bien répondu":"
                   }, inplace=True
          )
 
-df=df.sort_values(by=['Points'])
+
 st.markdown('Points')
 st.bar_chart(df['Points'], use_container_width=True)
 
-df=df.sort_values(by=['Distance'])
+
 st.markdown('Distance totale')
 st.bar_chart(df['Distance'])
 
-df=df.sort_values(by=['Pas'])
+
 st.markdown('Nombre de pas')
 st.bar_chart(df['Pas'])
 
-df=df.sort_values(by=['Missions'])
+
 st.markdown('Nombre de missions validées')
 st.bar_chart(df['Missions'])
 
-df=df.sort_values(by=['Boosts'])
+
 st.markdown('Nombre de Boosts')
 st.bar_chart(df['Boosts'])
 
-df=df.sort_values(by=['Quizz'])
+
 st.markdown('Nombre de Quizz bien répondu')
 st.bar_chart(df['Quizz'])
 
+st.markdown('Regroupements multicritères')
 st.image('./Dendro_0228.jpg')
 
 df=df.drop(['Nombre de Commentaires', 'Nombre de likes émis', 'Boosts reçus', 'Nombre de personnes',
@@ -48,7 +49,7 @@ df=df.drop(['Nombre de Commentaires', 'Nombre de likes émis', 'Boosts reçus', 
 st.markdown('Données chiffrées')
 st.write(df)
 
-st.markdown('Données statistiques')
+st.markdown('Statistiques')
 st.write(df.describe().transpose().round())
 
 
