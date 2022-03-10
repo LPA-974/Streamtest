@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-import plotly.express as px
+
 st.title ("Challenge hivernal ASCAA")
 st.subheader('Résultats au 28 Février 2022')
 
@@ -15,7 +15,7 @@ df.rename(columns={"Boosts envoyés":"Boosts", "Nombre de quizz bien répondu":"
 
 df=df.sort_values(by=['Points'])
 st.markdown('Points au 28 Février')
-st.bar_chart(df['Points'])
+st.bar_chart(df['Points'], use_container_width=True)
 
 df=df.sort_values(by=['Distance'])
 st.markdown('Distance totale au 28 Février')
