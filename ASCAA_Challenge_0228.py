@@ -13,19 +13,23 @@ df.rename(columns={"Boosts envoyés":"Boosts", "Nombre de quizz bien répondu":"
                   }, inplace=True
          )
 
-
+df=_df.sort_values(by=['Points'])
 st.markdown('Points au 28 Février')
 st.bar_chart(df['Points'])
 
+df=_df.sort_values(by=['Distance'])
 st.markdown('Distance totale au 28 Février')
 st.bar_chart(df['Distance'])
 
+df=_df.sort_values(by=['Missions'])
 st.markdown('Nombre de missions validées')
 st.bar_chart(df['Missions'])
 
+df=_df.sort_values(by=['Boosts'])
 st.markdown('Nombre de Boosts')
 st.bar_chart(df['Boosts'])
 
+df=_df.sort_values(by=['Quizz'])
 st.markdown('Nombre de Quizz bien répondu')
 st.bar_chart(df['Quizz'])
 
