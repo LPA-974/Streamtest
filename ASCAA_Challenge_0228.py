@@ -3,8 +3,8 @@ import streamlit as st
 
 st.image('./ASCAA_logo.jpg')
 
-st.title ("Challenge hivernal ASCAA")
-st.subheader('Résultats intermédaires au 28 Février 2022')
+st.title ("Challenge Hivernal ASCAA")
+st.subheader('Résultats intermédiaires au 28 Février 2022')
 
 df=pd.read_csv("Rapport_Hebdo_2802.csv",sep=";", encoding='Latin_1', index_col = 0)
 print(df.info())
