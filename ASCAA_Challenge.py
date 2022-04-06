@@ -10,7 +10,7 @@ df=pd.read_csv("Rapport_Challenge_ASCAA.csv",sep=";", encoding='Latin_1', index_
 print(df.info())
 df.head(30)
 
-df.rename(columns={"Boosts envoyés":"Boosts", "Nombre de quizz bien répondu":"Quizz", "Missions validés":"Missions",
+df.rename(columns={"Boosts reçus":"Boosts", "Nombre de quizz bien répondus":"Quizz", "Missions validés":"Missions",
                    "Distance totale":"Distance", "Nombre de pas":"Pas",
                   }, inplace=True
          )
