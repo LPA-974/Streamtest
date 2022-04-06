@@ -25,7 +25,7 @@ df.set_index('Nom')
 st.write(df.head())
 
 st.markdown('Points')
-st.bar_chart(df['Points'], use_container_width=True)
+st.bar_chart(df['Points'], labels = df['Nom'], use_container_width=True)
 
 df = df.sort_values(by = ['Distance'], key= abs, ascending = False)
 df = df.reset_index(drop=True)
