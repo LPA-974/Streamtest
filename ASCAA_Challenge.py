@@ -20,6 +20,7 @@ df = df.sort_values(by = ['Points'], key= abs, ascending = False)
 df = df.reset_index()
 st.write(df.head())
 
+st.markdown('Set_index')
 df.set_index('Nom')
 st.write(df.head())
 
