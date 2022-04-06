@@ -17,6 +17,7 @@ df.rename(columns={"Boosts reçus":"Boosts", "Nombre de quizz bien répondus":"Q
 
 
 st.markdown('Points')
+
 st.bar_chart(df['Points'], use_container_width=True)
 
 
@@ -42,7 +43,7 @@ st.bar_chart(df['Quizz'])
 st.markdown('Regroupements multicritères')
 st.image('./Dendro_0228.jpg')
 
-df=df.drop(['Nombre de Commentaires', 'Nombre de likes émis', 'Boosts reçus', 'Nombre de personnes',
+df=df.drop(['Nombre de Commentaires', 'Nombre de likes émis', 'Boosts envoyés', 'Nombre de personnes',
             'Nombre de quizz répondus',
            ], axis=1)
 
