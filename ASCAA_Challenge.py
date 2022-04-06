@@ -20,11 +20,14 @@ df = df.sort_values(by = ['Points'], key= abs, ascending = False)
 df = df.reset_index()
 st.write(df.head())
 
+df.set_index('Nom')
+st.write(df.head())
+
 st.markdown('Points')
 st.bar_chart(df['Points'], use_container_width=True)
 
 df = df.sort_values(by = ['Distance'], key= abs, ascending = False)
-df = df.reset_index()
+df = df.reset_index(drop=True)
 st.write(df.head())
 
 st.markdown('Distance totale')
