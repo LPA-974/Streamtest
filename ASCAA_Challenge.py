@@ -31,7 +31,7 @@ st.bar_chart(df['Pas'])
 
 
 st.markdown('Nombre de missions validées')
-#st.bar_chart(df['Missions'])
+st.bar_chart(df['Missions'])
 
 
 st.markdown('Nombre de Boosts attribués')
