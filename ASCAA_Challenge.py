@@ -17,13 +17,14 @@ df.rename(columns={"Boosts reçus":"Boosts", "Nombre de quizz bien répondus":"Q
 
 
 df = df.sort_values(by = ['Points'], key= abs, ascending = False)
-df = df.reset_index(drop=True)
+df = df.reset_index()
+st.write(df.head())
 
 st.markdown('Points')
 st.bar_chart(df['Points'], use_container_width=True)
 
 df = df.sort_values(by = ['Distance'], key= abs, ascending = False)
-df = df.reset_index(drop=True)
+df = df.reset_index()
 
 st.markdown('Distance totale')
 st.bar_chart(df['Distance'])
