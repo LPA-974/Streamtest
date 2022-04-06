@@ -15,6 +15,7 @@ df.rename(columns={"Boosts reçus":"Boosts", "Nombre de quizz bien répondus":"Q
                   }, inplace=True
          )
 
+st.write(df.head(30))
 
 st.markdown('Points')
 
